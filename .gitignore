@@ -1,3 +1,9 @@
+# Latex stuff
+*.log
+*.toc
+*.out
+*.aux
+
 # Prerequisites
 *.d
 
