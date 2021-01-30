@@ -1,0 +1,400 @@
+\documentclass[letterpaper,12pt]{article}
+\usepackage{amsmath, amssymb, geometry, amsfonts, graphicx}
+\graphicspath{{./}}
+\usepackage[shortlabels]{enumitem}
+\usepackage{multicol}
+\usepackage{hyperref}
+
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+
+\title{Purdue Solar Racing Apollo Electrical Susystems}
+\author{Nicholas Gildenhuys}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Battery Protection Controller}
+   Main Function: Protect batteries and relay information fo the telemetry and driver display boards.  
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+   \end{itemize}
+      
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Battery terminals
+      \item Thermal sensor
+      \item Voltage Sensor
+      \item Aux Voltage
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Battery Themperature
+      \item Battery Capacity
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Protected battery output
+   \end{itemize}
+   \end{multicols}
+   % ARM-Cortex M1 Chip needed inputs and outputs
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports
+      \item \# of thermistors
+      \item \# Voltage info from IC
+      
+      \item CAN status
+   \end{enumerate}
+   \end{multicols}
+
+\pagebreak
+\section{Driver Display}
+Main Function: Display all necessary info to the driver.
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+      \item All car signals
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Aux Voltage
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item LCD Display, if not actually integrated into the board
+      \item Aux enable/kill?
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports 
+   \columnbreak
+      \item SPI output for display
+      \item Logical out for another type display
+      \item Multiplex line out for display
+   \end{enumerate}
+   \end{multicols}
+
+\pagebreak
+\section{Light Controller}
+   Main Function: Take CAN messages input from driver controller to turn on lights  
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+      \item Turn Signals (2)
+      \item Headlights
+      \item Horn
+      \item Windshield Wiper
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Aux Voltage
+   \end{itemize}
+   
+   \columnbreak
+   
+      \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Current Light Settings
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Hardware inputs
+      \item Power to lights, horn, and windshield wiper
+      \item Control signal to windshield wiper
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports
+      \item Switch to determine if it is a rear of front controller 
+      
+      \item \# PWM output for light controls 
+   \end{enumerate}
+   \end{multicols}
+
+\pagebreak
+\section{Junction (saftey) Controller}
+   Main Function: Buck down the voltage for the low power system and safely turn on all the subsytems.
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+      \item Soft Start System
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Protected battery voltage
+      \item Aux Voltage
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Current subsystems connected
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Bucked down voltage 
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      
+   \end{enumerate}
+   \end{multicols}
+
+\pagebreak
+\section{Motor Controller}
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Forward/Reverse
+      \item Cruise Control
+      \item Desired Speed
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Thermistor
+      \item Hall effect sensor
+      \item Aux Voltage   
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item 3 Phase motor outputs
+   \end{itemize}
+   \end{multicols}
+
+
+   \subsection{Motor Controller Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports for control
+      \item thermistor input from motor
+      \item hall effect input from motor
+
+      \item 3 PWM output for motor
+      \item desired speed output via SPI
+      \item current measurment output via SPI
+      \item voltage measurment output via SPI
+      \item SPI data output to controller 2
+   \end{enumerate}
+   \end{multicols}
+
+
+\pagebreak
+
+\pagebreak
+\section{Solar Array Controller}
+   Main Function: Let the rest of the system what's going on with the solar panel
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+      \item Mode of operation
+   \end{itemize}
+   
+   Hardware:
+   \begin{itemize}
+      \item Solar array
+      \item Aux Voltage
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Solar array power
+      \item conversion efficiency
+   \end{itemize}
+
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Power out
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+      \begin{enumerate}[(a.)]
+      \item Power/ground
+      \item CAN I/O networ ports
+      \item \# Panel Voltage info
+   \end{enumerate}
+   \end{multicols}
+
+
+\pagebreak
+\section{Vehicle Controller}
+Main Function: Multiplex through all the buttons on the driver wheel to check if any button has been pressed. Once a button has been pressed send proper CAN message.
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Aux Voltage
+      \item Muxed buttons
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Button Status
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Mux control
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports
+      \item Button logic input
+
+      \item Button mux select line output
+   \end{enumerate}
+   \end{multicols}
+
+
+\pagebreak
+\section{Wheel Controller}
+Main Function: Multiplex through all the buttons on the driver wheel to check if any button has been pressed. Once a button has been pressed send proper CAN message.
+   \subsection{Board I/O}
+   \begin{multicols}{2}
+   \flushleft{\textbf{Inputs:}}
+   
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Init Startup
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Aux Voltage
+      \item Muxed buttons
+   \end{itemize}
+   
+   \columnbreak
+   
+   \flushleft{\textbf{Outputs:}}
+
+   \flushleft{CAN:}
+   \begin{itemize}
+      \item Board Ready
+      \item Button Status
+   \end{itemize}
+   
+   \flushleft{Hardware:}
+   \begin{itemize}
+      \item Mux control
+   \end{itemize}
+   \end{multicols}
+
+   \subsection{Processor Ports}
+   \begin{multicols}{2}
+   \begin{enumerate}[(a.)]
+      \item power/ground
+      \item CAN I/O network ports
+      \item Button logic input
+
+      \item Button mux select line output
+   \end{enumerate}
+   \end{multicols}
+
+
+\pagebreak
+
+\end{document}
