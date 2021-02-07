@@ -2,10 +2,21 @@
  * bxcan.c
  *
  *  Created on: Nov 21, 2020
- *      Author: NicholasWGildenhuys
+ *  Author: NicholasWGildenhuys
  */
 #include "stm32f0xx.h"
 
+// For this version of the firmware
+// Port A will be used for the bxCAN
+// this is AF4 for PA11: can_rx and PA12: can_tx
+void init_CAN_ports()
+{
+    RCC -> AHBENR |= RCC_AHBENR_GPIOAEN;
+    // set the alternate function of pin 11 and 12 for bxCAN
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource11, GPIO_AF_4);
+    GPIO_PinAFConfig(GPIOA, GPIO_PinSource12, GPIO_AF_4);
+    return;
+}
 
 void init_bxCAN(int CAN_ID)
 {
@@ -18,7 +29,7 @@ void init_bxCAN(int CAN_ID)
 
     // exit sleep mode
     CAN -> MCR &= ~(CAN_MCR_SLEEP);
-    // set loopback mode, and timing to be 1Mb/s
+    // set loop-back mode, and timing to be 1Mb/s
     CAN -> BTR |= CAN_BTR_LBKM | 2 << 20 | 3 << 16 | 5 << 0;
     // leave init mode
     CAN -> MCR &= ~(CAN_MCR_INRQ);
@@ -53,7 +64,7 @@ void transmit_bxCAN(int CAN_ID, char DATA)
     return;
 }
 
-int recieve_bxCAN()
+int receive_bxCAN()
 {
     int CAN_receive_message;
     // poll until a message has been received

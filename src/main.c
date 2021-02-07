@@ -1,7 +1,7 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Ac6
+  * @author  Nicholas Gildenhuys
   * @version V1.0
   * @date    01-December-2013
   * @brief   Default main function.
@@ -11,7 +11,7 @@
 
 #include "stm32f0xx.h"
 #include <stdint.h> // for uint8_t
-
+#include "CANbx/bxcan.h"
 
 
 
@@ -23,8 +23,12 @@ int main(void)
      * wait for interrupt from boot up signal
      * send boot up signal acknowledge
      */
+    init_CAN_ports();
+    init_bxCAN();
 	for(;;)
 	{
+	    transmit_bxCAN(00, 'k');
+
 	    /* poll for commands
 	     * execute commands
 	     * eventually want to make it interrupt driven so then its only
