@@ -31,8 +31,9 @@ void init_headlight_control_pin(int pin)
    setup_port(pin, PWM_OUT);
    // test comment for git
    // test comment number 3
-}
+   // Additonal comment
 
+}
 
 void init_rearlights_control_pin(int pin)
 {
