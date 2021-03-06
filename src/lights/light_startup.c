@@ -29,9 +29,9 @@ void init_headlight_control_pin(int pin)
    setup_tim6(); // using timer 6 for pwm control signal of the headlights
    // need to setup the IRQ handler 
    setup_port(pin, PWM_OUT);
+   // test comment for git
 
 }
-
 
 void init_rearlights_control_pin(int pin)
 {
