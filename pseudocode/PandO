@@ -1,0 +1,3 @@
+I = current(x)
+V = voltage(x)
+P = I(x) * V(x)
