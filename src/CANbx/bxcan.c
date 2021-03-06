@@ -15,6 +15,9 @@ void init_CAN_ports()
     // set the alternate function of pin 11 and 12 for bxCAN
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource11, GPIO_AF_4);
     GPIO_PinAFConfig(GPIOA, GPIO_PinSource12, GPIO_AF_4);
+    // set the pull up resistor on the rx pin
+    GPIOA -> PUPDR |= GPIO_PUPDR_PUPDR11_0;
+    GPIOA -> PUPDR &= ~GPIO_PUPDR_PUPDR11_1;
     return;
 }
 
@@ -31,6 +34,7 @@ void init_bxCAN(int CAN_ID)
     CAN -> MCR &= ~(CAN_MCR_SLEEP);
     // set loop-back mode, and timing to be 1Mb/s
     CAN -> BTR |= CAN_BTR_LBKM | 2 << 20 | 3 << 16 | 5 << 0;
+                               // TS2      TS1       BRP
     // leave init mode
     CAN -> MCR &= ~(CAN_MCR_INRQ);
     // wait for hardware to leave init mode
