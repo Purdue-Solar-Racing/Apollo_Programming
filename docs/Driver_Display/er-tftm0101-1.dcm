@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ER-TFTM0101-1
+D TFT LCD Display Module
+K tft LCD display east rising
+$ENDCMP
+#
+#End Doc Library
