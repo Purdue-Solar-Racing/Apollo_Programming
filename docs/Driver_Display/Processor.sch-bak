@@ -839,20 +839,12 @@ Wire Wire Line
 	8250 2050 8700 2050
 Text Label 8700 2050 0    50   ~ 0
 PA3
-Wire Wire Line
-	8250 2150 8700 2150
 Text Label 8700 2150 0    50   ~ 0
 PA4
-Wire Wire Line
-	8250 2250 8700 2250
 Text Label 8700 2250 0    50   ~ 0
 PA5
-Wire Wire Line
-	8250 2350 8700 2350
 Text Label 8700 2350 0    50   ~ 0
 PA6
-Wire Wire Line
-	8250 2450 8700 2450
 Text Label 8700 2450 0    50   ~ 0
 PA7
 Wire Wire Line
@@ -915,12 +907,8 @@ Wire Wire Line
 	8250 4150 8700 4150
 Text Label 8700 4150 0    50   ~ 0
 PB7
-Wire Wire Line
-	8250 4250 8700 4250
 Text Label 8700 4250 0    50   ~ 0
 PB8
-Wire Wire Line
-	8250 4350 8700 4350
 Text Label 8700 4350 0    50   ~ 0
 PB9
 Wire Wire Line
@@ -995,8 +983,6 @@ Wire Wire Line
 	6500 4150 6950 4150
 Text Label 6500 4150 0    50   ~ 0
 PC7
-Wire Wire Line
-	6500 4250 6950 4250
 Text Label 6500 4250 0    50   ~ 0
 PC8
 Wire Wire Line
@@ -1080,4 +1066,34 @@ Wire Wire Line
 Text Label 2100 5950 0    50   ~ 0
 PC14
 NoConn ~ 2150 1500
+Text HLabel 9150 4250 2    50   Input ~ 0
+CAN_Rx
+Text HLabel 9150 4350 2    50   Input ~ 0
+CAN_Tx
+Wire Wire Line
+	8250 4250 9150 4250
+Wire Wire Line
+	8250 4350 9150 4350
+Text GLabel 6750 1750 1    50   Input ~ 0
+NRST
+Text HLabel 9150 2450 2    50   Input ~ 0
+SPI_MOSI
+Text HLabel 9150 2250 2    50   Input ~ 0
+SPI_CLK
+Text HLabel 9150 2350 2    50   Input ~ 0
+SPI_MISO
+Text HLabel 9150 2150 2    50   Input ~ 0
+SPI_NSS
+Wire Wire Line
+	8250 2150 9150 2150
+Wire Wire Line
+	8250 2250 9150 2250
+Wire Wire Line
+	8250 2350 9150 2350
+Wire Wire Line
+	8250 2450 9150 2450
+Text HLabel 6200 4250 0    50   Input ~ 0
+BL_PWM_CONTROL
+Wire Wire Line
+	6200 4250 6950 4250
 $EndSCHEMATC
