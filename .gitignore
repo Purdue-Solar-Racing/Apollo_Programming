@@ -1,5 +1,5 @@
 # KiCad Schematic stuff
-*.sch-bak
+**.sch-bak
 
 # Latex stuff
 *.log
