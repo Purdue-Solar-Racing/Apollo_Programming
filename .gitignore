@@ -1,5 +1,6 @@
 # KiCad Schematic stuff
 *.sch-bak
+fp-info-cache
 
 # Latex stuff
 *.log
