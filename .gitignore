@@ -1,3 +1,6 @@
+# KiCad Schematic stuff
+*.sch-bak
+
 # Latex stuff
 *.log
 *.toc
@@ -57,3 +60,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 /Debug/
+/Release/
