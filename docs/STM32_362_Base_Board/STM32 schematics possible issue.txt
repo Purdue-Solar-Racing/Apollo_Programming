@@ -1,0 +1,6 @@
+Possible issue:
+1) Different types of LED were used. Schematics of the original PDF file uses
+solid filled LED symbol whereas the newly created schematics uses a hollow LED symbol.
+
+2)Specifications of LED, ferrite beadr and nominal voltage are added using 'Place text' tool. I am not
+certain if that is the correct way of labeling the specifications.
