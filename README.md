@@ -16,7 +16,7 @@ Status Key:
 |---------------------------|---------------------|--------|---------------------------|-------|
 | Battery Protection System | Nate Nauman         | 2/3    | Nicholas Gildenhuys       |       |
 | Driver Display            | Matt Cambell        | 1      |                           |       |
-| Light Controller          | Darin Tsai          | 1      |                           |       |
+| Light Controller          | Darin Tsai          | 2      |                           |       |
 | Junction Controller       | Nicholas Gildenhuys | 0      |                           |       |
 | Motor Controller          | Nate Nauman         | 2      | Nicholas Gildenhuys       |       |
 | Solar Array Controller    | Landon Lindsay      | 1      | Dhanu De Silva, Jing Hoon |       |
