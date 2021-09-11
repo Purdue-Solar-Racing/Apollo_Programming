@@ -3,12 +3,12 @@ Purdue Solar main code repository for the Apollo car.
 
 
 ## Subsystem Hardware Status
-Status Key:
+Status Key and Due Dates
 0. Not Started
 1. Started in Research
 2. In Schematic Work
-3. Schematic Finished
-4. PCB Layout Finished
+3. Schematic Finished - Oct 23rd, 2021
+4. PCB Layout Finished - Nov 13/20th, 2021
 5. Manufactuing Stage
 6. Debugged and Working
 
