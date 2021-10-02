@@ -244,7 +244,7 @@ F 3 "~" H 3300 3100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3300 3000 3200 3000
-Text GLabel 3750 3000 2    50   Input ~ 0
+Text GLabel 3750 3000 2    50   Output ~ 0
 LEFT_TURN
 Wire Wire Line
 	650  2750 650  3000
@@ -459,7 +459,7 @@ Wire Wire Line
 	2800 1100 2750 1100
 Wire Wire Line
 	3400 1100 3300 1100
-Text GLabel 3700 1100 2    50   Input ~ 0
+Text GLabel 3700 1100 2    50   Output ~ 0
 RIGHT_TURN
 $Comp
 L power:+3.3V #PWR0116
@@ -527,8 +527,6 @@ Wire Wire Line
 	3050 1500 3500 1500
 Wire Notes Line
 	4250 2350 450  2350
-Wire Notes Line
-	450  500  4250 500 
 Wire Wire Line
 	3750 3000 3650 3000
 Wire Wire Line
@@ -556,14 +554,102 @@ F 3 "" H 650 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 2021-09-25_19-11-26:LM3409MY_NOPB U?
-U 1 1 6153DA36
-P 2400 5300
-F 0 "U?" H 3600 5687 60  0000 C CNN
-F 1 "LM3409MY_NOPB" H 3600 5581 60  0000 C CNN
-F 2 "MUC10A" H 3600 5540 60  0001 C CNN
-F 3 "" H 2400 5300 60  0000 C CNN
-	1    2400 5300
+L Switch:SW_DIP_x02 SW?
+U 1 1 6158D255
+P 4800 1150
+F 0 "SW?" H 4800 1517 50  0000 C CNN
+F 1 "SW_DIP_x02" H 4800 1426 50  0000 C CNN
+F 2 "" H 4800 1150 50  0001 C CNN
+F 3 "~" H 4800 1150 50  0001 C CNN
+	1    4800 1150
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_US R?
+U 1 1 6158DFCC
+P 5250 1400
+F 0 "R?" H 5318 1446 50  0000 L CNN
+F 1 "82.5k" H 5318 1355 50  0000 L CNN
+F 2 "" V 5290 1390 50  0001 C CNN
+F 3 "~" H 5250 1400 50  0001 C CNN
+	1    5250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 6158EBDE
+P 5600 1400
+F 0 "R?" H 5668 1446 50  0000 L CNN
+F 1 "82.5k" H 5668 1355 50  0000 L CNN
+F 2 "" V 5640 1390 50  0001 C CNN
+F 3 "~" H 5600 1400 50  0001 C CNN
+	1    5600 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 5800 1050 2    50   Output ~ 0
+SW1
+Text GLabel 5800 1150 2    50   Output ~ 0
+SW2
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6158F155
+P 4350 950
+F 0 "#PWR?" H 4350 800 50  0001 C CNN
+F 1 "+3.3V" H 4365 1123 50  0000 C CNN
+F 2 "" H 4350 950 50  0001 C CNN
+F 3 "" H 4350 950 50  0001 C CNN
+	1    4350 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1600 5400 1600
+Wire Wire Line
+	4350 950  4350 1050
+Wire Wire Line
+	4500 1050 4350 1050
+Connection ~ 4350 1050
+Wire Wire Line
+	4350 1050 4350 1150
+$Comp
+L power:GND #PWR?
+U 1 1 61596C8B
+P 5400 1600
+F 0 "#PWR?" H 5400 1350 50  0001 C CNN
+F 1 "GND" H 5405 1427 50  0000 C CNN
+F 2 "" H 5400 1600 50  0001 C CNN
+F 3 "" H 5400 1600 50  0001 C CNN
+	1    5400 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 1600
+Wire Wire Line
+	5400 1600 5250 1600
+Wire Wire Line
+	5250 1600 5250 1550
+Wire Wire Line
+	5600 1600 5600 1550
+Wire Wire Line
+	5100 1150 5250 1150
+Wire Wire Line
+	5100 1050 5600 1050
+Wire Wire Line
+	5600 1250 5600 1050
+Connection ~ 5600 1050
+Wire Wire Line
+	5600 1050 5800 1050
+Wire Wire Line
+	5250 1250 5250 1150
+Connection ~ 5250 1150
+Wire Wire Line
+	5250 1150 5800 1150
+Wire Wire Line
+	4350 1150 4500 1150
+Wire Notes Line
+	6050 500  6050 1900
+Wire Notes Line
+	6050 1900 4250 1900
+Wire Notes Line
+	450  500  6050 500 
+Text Notes 5300 1900 0    50   ~ 0
+Light Mode Switch\n
 $EndSCHEMATC
