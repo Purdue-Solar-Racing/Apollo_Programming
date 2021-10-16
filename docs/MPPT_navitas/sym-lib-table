@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name Interface_CAN_LIN)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/Interface_CAN_LIN.lib)(options "")(descr ""))
+  (lib (name power_Jing)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/power_Jing.lib)(options "")(descr ""))
+  (lib (name 2021-10-09_19-54-13)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/2021-10-09_19-54-13.lib)(options "")(descr ""))
+  (lib (name Driver_FET)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/Driver_FET.lib)(options "")(descr ""))
+)

@@ -1,0 +1,60 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1100 950  2600 2450
+U 616CD409
+F0 "Sheet616CD408" 50
+F1 "STM32_MPPT.sch" 50
+F2 "test" I R 3700 1450 50 
+$EndSheet
+$Sheet
+S 1000 4000 2700 2000
+U 616CDF4B
+F0 "Sheet616CDF4A" 50
+F1 "MPPT_microcontrol_peri.sch" 50
+F2 "UART32_TX" I R 3700 4350 71 
+F3 "UART32_RX" I R 3700 4550 71 
+F4 "DIP_SW1" I R 3700 4800 71 
+F5 "DIP_SW2" I R 3700 5000 71 
+F6 "DIP_SW3" I R 3700 5150 71 
+F7 "DIP_SW4" I R 3700 5250 71 
+F8 "MPPT_RST" I R 3700 5350 71 
+F9 "SW2" I R 3700 5450 71 
+F10 "SW3" I R 3700 5550 71 
+F11 "SW4" I R 3700 5750 71 
+F12 "AUX_SENSE" I R 3700 5850 71 
+F13 "CAN_RX" I R 3700 4150 71 
+F14 "CAN_TX" I L 1000 4150 71 
+$EndSheet
+$Sheet
+S 5650 1000 1850 2050
+U 616CDFA9
+F0 "Sheet616CDFA8" 50
+F1 "MPPT_power_supplies.sch" 50
+$EndSheet
+$Sheet
+S 5500 4050 2100 1600
+U 616CE016
+F0 "Sheet616CE015" 50
+F1 "MPPT_control_gate_drive.sch" 50
+$EndSheet
+$Sheet
+S 8600 1100 2000 1950
+U 616CE05A
+F0 "Sheet616CE059" 50
+F1 "MPPT_power_electronics.sch" 50
+$EndSheet
+$EndSCHEMATC
