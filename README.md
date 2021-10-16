@@ -16,11 +16,11 @@ Status Key and Due Dates
 |---------------------------|---------------------|--------|---------------------------|-------|
 | Battery Protection System | Nate Nauman         | 2/3    | Nicholas Gildenhuys       |       |
 | Driver Display            | Matt Cambell        | 1      |                           |       |
-| Light Controller          | Darin Tsai          | 2      |                           |       |
+| Light Controller          | Darin Tsai          | 2/3    |                           |       |
 | Junction Controller       | Nicholas Gildenhuys | 0      |                           |       |
 | Motor Controller          | Nate Nauman         | 2      | Nicholas Gildenhuys       |       |
-| Solar Array Controller    | Landon Lindsay      | 1      | Dhanu De Silva, Jing Hoon |       |
-| Vehicle Controller        | Roshni Sharma       | 1      |                           |       |
+| Solar Array Controller    | Landon Lindsay      | 2/3    | Dhanu De Silva, Jing Hoon |       |
+| Vehicle Controller        | Roshni Sharma       | 2/3    |                           |       |
 | Wheel Controller          | Nicholas Gildenhuys | 3      |                           |       |
 
 ## Subsystem Software Status
