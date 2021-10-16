@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -1244,17 +1244,6 @@ F 3 "~" H 1150 7100 50  0001 C CNN
 $EndComp
 $Comp
 L Device:D D?
-U 1 1 617094CA
-P 1400 7350
-F 0 "D?" V 1446 7270 50  0000 R CNN
-F 1 "D" V 1355 7270 50  0000 R CNN
-F 2 "" H 1400 7350 50  0001 C CNN
-F 3 "~" H 1400 7350 50  0001 C CNN
-	1    1400 7350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D D?
 U 1 1 6170AA19
 P 6500 1050
 F 0 "D?" V 6546 970 50  0000 R CNN
@@ -1351,48 +1340,44 @@ Wire Wire Line
 $Comp
 L power:+3.3V #PWR?
 U 1 1 61741AD1
-P 1600 7150
-F 0 "#PWR?" H 1600 7000 50  0001 C CNN
-F 1 "+3.3V" H 1615 7323 50  0000 C CNN
-F 2 "" H 1600 7150 50  0001 C CNN
-F 3 "" H 1600 7150 50  0001 C CNN
-	1    1600 7150
+P 2200 6800
+F 0 "#PWR?" H 2200 6650 50  0001 C CNN
+F 1 "+3.3V" H 2215 6973 50  0000 C CNN
+F 2 "" H 2200 6800 50  0001 C CNN
+F 3 "" H 2200 6800 50  0001 C CNN
+	1    2200 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Fuse F?
 U 1 1 617426FC
-P 1950 7150
-F 0 "F?" V 1753 7150 50  0000 C CNN
-F 1 "Fuse" V 1844 7150 50  0000 C CNN
-F 2 "" V 1880 7150 50  0001 C CNN
-F 3 "~" H 1950 7150 50  0001 C CNN
-	1    1950 7150
+P 2550 6800
+F 0 "F?" V 2353 6800 50  0000 C CNN
+F 1 "Fuse" V 2444 6800 50  0000 C CNN
+F 2 "" V 2480 6800 50  0001 C CNN
+F 3 "~" H 2550 6800 50  0001 C CNN
+	1    2550 6800
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:D D?
 U 1 1 617431A2
-P 2300 7600
-F 0 "D?" H 2300 7817 50  0000 C CNN
-F 1 "D" H 2300 7726 50  0000 C CNN
-F 2 "" H 2300 7600 50  0001 C CNN
-F 3 "~" H 2300 7600 50  0001 C CNN
-	1    2300 7600
+P 2850 7250
+F 0 "D?" H 2850 7467 50  0000 C CNN
+F 1 "D" H 2850 7376 50  0000 C CNN
+F 2 "" H 2850 7250 50  0001 C CNN
+F 3 "~" H 2850 7250 50  0001 C CNN
+	1    2850 7250
 	1    0    0    -1  
 $EndComp
-Text GLabel 3050 7350 0    50   Output ~ 0
+Text GLabel 3400 7000 0    50   Output ~ 0
 WIPER_GND
-Text GLabel 3050 7250 0    50   Output ~ 0
+Text GLabel 3450 6900 0    50   Output ~ 0
 WIPER_PARK
-Wire Wire Line
-	1800 7150 1600 7150
 Wire Notes Line
 	450  7800 4250 7800
 Wire Notes Line
 	450  500  450  7800
-Wire Notes Line
-	4250 500  4250 7800
 Wire Notes Line
 	7650 6550 11200 6550
 Wire Notes Line
@@ -1406,7 +1391,149 @@ Wire Notes Line
 Wire Notes Line
 	11200 2200 11200 500 
 Wire Notes Line
-	6050 500  6050 2200
-Wire Notes Line
 	450  500  11200 500 
+$Comp
+L Connector_Generic:Conn_01x03 J?
+U 1 1 616B4A78
+P 3700 6900
+F 0 "J?" H 3780 6942 50  0000 L CNN
+F 1 "Conn_01x03" H 3780 6851 50  0000 L CNN
+F 2 "" H 3700 6900 50  0001 C CNN
+F 3 "~" H 3700 6900 50  0001 C CNN
+	1    3700 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 6900 3400 6900
+Wire Wire Line
+	3500 7000 3450 7000
+Wire Wire Line
+	3450 7000 3450 7250
+Connection ~ 3450 7000
+Wire Wire Line
+	3450 7000 3400 7000
+$Comp
+L Connector_Generic:Conn_02x04_Odd_Even J4
+U 1 1 616D0DFD
+P 5000 2250
+F 0 "J4" H 5050 2567 50  0000 C CNN
+F 1 "CON8A" H 5050 2476 50  0000 C CNN
+F 2 "" H 5000 2250 50  0001 C CNN
+F 3 "~" H 5000 2250 50  0001 C CNN
+	1    5000 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 2150 2    50   Output ~ 0
+LEFT_SNS
+Text GLabel 4800 2150 0    50   Input ~ 0
+LEFT_TURN
+Text GLabel 4800 2250 0    50   Input ~ 0
+RIGHT_TURN
+Text GLabel 5300 2250 2    50   Output ~ 0
+RIGHT_SNS
+Text GLabel 5300 2450 2    50   Output ~ 0
+BRAKE_SNS
+Text GLabel 4800 2450 0    50   Input ~ 0
+BRAKE
+Text GLabel 4800 2350 0    50   Input ~ 0
+HEADLIGHT
+$Comp
+L power:GND #PWR?
+U 1 1 616DF8F8
+P 5950 2350
+F 0 "#PWR?" H 5950 2100 50  0001 C CNN
+F 1 "GND" H 5955 2177 50  0000 C CNN
+F 2 "" H 5950 2350 50  0001 C CNN
+F 3 "" H 5950 2350 50  0001 C CNN
+	1    5950 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 2350 5950 2350
+Wire Notes Line
+	6050 2800 4250 2800
+Wire Notes Line
+	6050 500  6050 2800
+Text Notes 5200 2800 0    50   ~ 0
+Connector to Lights
+Text Notes 10200 6500 0    50   ~ 0
+Headlight Current Source\n
+$Comp
+L Isolator:SFH617A-1 U?
+U 1 1 6172167A
+P 1700 7300
+F 0 "U?" H 1700 7625 50  0000 C CNN
+F 1 "SFH617A-1" H 1700 7534 50  0000 C CNN
+F 2 "Package_DIP:DIP-4_W7.62mm" H 1500 7100 50  0001 L CIN
+F 3 "http://www.vishay.com/docs/83740/sfh617a.pdf" H 1700 7300 50  0001 L CNN
+	1    1700 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 7400 1400 7500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 61728548
+P 2000 7100
+F 0 "#PWR?" H 2000 6950 50  0001 C CNN
+F 1 "+3.3V" H 2015 7273 50  0000 C CNN
+F 2 "" H 2000 7100 50  0001 C CNN
+F 3 "" H 2000 7100 50  0001 C CNN
+	1    2000 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 7100 2000 7200
+$Comp
+L Device:R_US R?
+U 1 1 6172E8E8
+P 2150 7550
+F 0 "R?" H 2218 7596 50  0000 L CNN
+F 1 "82.5k" H 2218 7505 50  0000 L CNN
+F 2 "" V 2190 7540 50  0001 C CNN
+F 3 "~" H 2150 7550 50  0001 C CNN
+	1    2150 7550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6172F240
+P 2350 7550
+F 0 "#PWR?" H 2350 7300 50  0001 C CNN
+F 1 "GND" H 2355 7377 50  0000 C CNN
+F 2 "" H 2350 7550 50  0001 C CNN
+F 3 "" H 2350 7550 50  0001 C CNN
+	1    2350 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 7550 2350 7550
+Wire Wire Line
+	2000 7550 2000 7400
+Text GLabel 2200 7400 2    50   Output ~ 0
+WIPER_PARK_SENSE
+Wire Wire Line
+	2200 7400 2000 7400
+Connection ~ 2000 7400
+Wire Wire Line
+	3450 7250 3000 7250
+Wire Wire Line
+	2700 6800 2700 7250
+Wire Wire Line
+	2400 6800 2200 6800
+Wire Wire Line
+	2700 6800 3500 6800
+Connection ~ 2700 6800
+Text Notes 3250 7750 0    50   ~ 0
+Windshield Wiper Circuits
+Wire Notes Line
+	4250 450  4250 7800
+Text Notes 3150 6050 0    50   ~ 0
+Breaklight Current Source
+$Sheet
+S 5100 3850 850  750 
+U 616B5185
+F0 "stm" 50
+F1 "stm.sch" 50
+$EndSheet
 $EndSCHEMATC
