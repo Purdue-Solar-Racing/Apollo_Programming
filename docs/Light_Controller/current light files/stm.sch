@@ -1670,4 +1670,34 @@ Text Label 6750 3300 0    50   ~ 0
 PA14SWCLK_IN
 Text Label 7450 4100 0    50   ~ 0
 PA0
+Text Notes 3100 7400 0    50   ~ 0
+Oscillator
+Text Notes 5450 7400 0    50   ~ 0
+Oscillator
+Text Notes 2650 4350 0    50   ~ 0
+Decoupling capacitors
+Text GLabel 8400 2750 2    50   Input ~ 0
+HORN_BUTTON
+Text GLabel 8450 2950 2    50   Output ~ 0
+LEFT_TURN_PWM
+Text GLabel 8450 3150 2    50   Output ~ 0
+RIGHT_TURN_PWM
+Text GLabel 8450 3350 2    50   Output ~ 0
+HEADLIGHT_PWM
+Text GLabel 8450 3550 2    50   Output ~ 0
+BRAKE_PWM
+Text GLabel 8300 3750 2    50   Input ~ 0
+RIGHT_TURN_BUTTON
+Text GLabel 8300 3900 2    50   Input ~ 0
+LEFT_TURN_BUTTON
+Text GLabel 8300 4100 2    50   Input ~ 0
+HEADLIGHT_BUTTON
+Text GLabel 8800 4350 0    50   Input ~ 0
+LIGHT_SENSE
+Text GLabel 8650 4550 0    50   Input ~ 0
+HORN_EN
+Text GLabel 8650 4700 0    50   Input ~ 0
+WIPER_EN
+Text GLabel 8800 4850 0    50   Input ~ 0
+WIPER_PARK_SENSE
 $EndSCHEMATC
