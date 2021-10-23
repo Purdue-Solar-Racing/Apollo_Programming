@@ -1995,4 +1995,24 @@ Text HLabel 7200 1450 2    50   Input ~ 0
 UART32_RX
 Text HLabel 7200 1350 2    50   Output ~ 0
 UART32_TX
+Text HLabel 5250 2950 0    50   Input ~ 0
+MPPT_RST
+Text HLabel 5250 3650 0    50   Input ~ 0
+MPPT_SDA
+Text HLabel 7200 1950 2    50   Input ~ 0
+MPPT_SCL
+Text HLabel 5250 3050 0    50   Input ~ 0
+Boots_EN
+Text HLabel 7200 2250 2    50   Input ~ 0
+CAN_RX
+Text HLabel 7200 2350 2    50   Input ~ 0
+CAN_TX
+Text HLabel 5250 3150 0    50   Input ~ 0
+DIP_SW1
+Text HLabel 5250 3250 0    50   Input ~ 0
+DIP_SW2
+Text HLabel 5250 3350 0    50   Input ~ 0
+DIP_SW3
+Text HLabel 5250 3450 0    50   Input ~ 0
+DIP_SW4
 $EndSCHEMATC
