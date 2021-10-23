@@ -1436,7 +1436,13 @@ F 3 "~" H 10150 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
+	9200 550  9200 6450
+Wire Notes Line
 	9200 6450 11100 6450
+Wire Notes Line
+	11100 6450 11100 550 
+Wire Notes Line
+	11100 550  9200 550 
 Text Notes 7350 7500 0    71   ~ 14
 STM32F091 Dev Board
 Text Notes 8150 7650 0    50   ~ 0
@@ -1749,10 +1755,10 @@ F 3 "~" H 8450 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR01
 U 1 1 61F6397B
 P 6300 6200
-F 0 "#PWR?" H 6300 5950 50  0001 C CNN
+F 0 "#PWR01" H 6300 5950 50  0001 C CNN
 F 1 "GND" H 6305 6027 50  0000 C CNN
 F 2 "" H 6300 6200 50  0001 C CNN
 F 3 "" H 6300 6200 50  0001 C CNN
@@ -1760,10 +1766,10 @@ F 3 "" H 6300 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 61F6457D
 P 7000 6200
-F 0 "#PWR?" H 7000 5950 50  0001 C CNN
+F 0 "#PWR02" H 7000 5950 50  0001 C CNN
 F 1 "GND" H 7005 6027 50  0000 C CNN
 F 2 "" H 7000 6200 50  0001 C CNN
 F 3 "" H 7000 6200 50  0001 C CNN
@@ -1771,10 +1777,10 @@ F 3 "" H 7000 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 61F64975
 P 7750 6200
-F 0 "#PWR?" H 7750 5950 50  0001 C CNN
+F 0 "#PWR03" H 7750 5950 50  0001 C CNN
 F 1 "GND" H 7755 6027 50  0000 C CNN
 F 2 "" H 7750 6200 50  0001 C CNN
 F 3 "" H 7750 6200 50  0001 C CNN
@@ -1782,10 +1788,10 @@ F 3 "" H 7750 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR04
 U 1 1 61F64E49
 P 8450 6200
-F 0 "#PWR?" H 8450 5950 50  0001 C CNN
+F 0 "#PWR04" H 8450 5950 50  0001 C CNN
 F 1 "GND" H 8455 6027 50  0000 C CNN
 F 2 "" H 8450 6200 50  0001 C CNN
 F 3 "" H 8450 6200 50  0001 C CNN
@@ -1876,8 +1882,91 @@ Wire Notes Line
 	9200 3100 11100 3100
 Wire Notes Line
 	9200 4200 11100 4200
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 6218A82A
+P 10800 950
+F 0 "J1" H 10880 942 50  0000 L CNN
+F 1 "Header 6" H 10700 550 50  0000 L CNN
+F 2 "" H 10800 950 50  0001 C CNN
+F 3 "~" H 10800 950 50  0001 C CNN
+	1    10800 950 
+	1    0    0    -1  
+$EndComp
+Text GLabel 10200 1050 0    50   BiDi ~ 0
+PGED
+Text GLabel 10200 1150 0    50   Output ~ 0
+PGEC
+NoConn ~ 10600 1250
+$Comp
+L power:GND #PWR06
+U 1 1 621A22A9
+P 10350 1300
+F 0 "#PWR06" H 10350 1050 50  0001 C CNN
+F 1 "GND" H 10355 1127 50  0000 C CNN
+F 2 "" H 10350 1300 50  0001 C CNN
+F 3 "" H 10350 1300 50  0001 C CNN
+	1    10350 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 950  10350 950 
+Wire Wire Line
+	10350 950  10350 1300
+Wire Wire Line
+	10600 1050 10200 1050
+Wire Wire Line
+	10600 1150 10200 1150
+$Comp
+L power:+3V0 #PWR05
+U 1 1 621E3FDF
+P 10300 700
+F 0 "#PWR05" H 10300 550 50  0001 C CNN
+F 1 "+3V0" H 10400 750 50  0000 C CNN
+F 2 "" H 10300 700 50  0001 C CNN
+F 3 "" H 10300 700 50  0001 C CNN
+	1    10300 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R100
+U 1 1 621E4FAB
+P 9850 750
+F 0 "R100" H 9918 796 50  0000 L CNN
+F 1 "10k" H 9918 705 50  0000 L CNN
+F 2 "" V 9890 740 50  0001 C CNN
+F 3 "~" H 9850 750 50  0001 C CNN
+	1    9850 750 
+	1    0    0    -1  
+$EndComp
+Text GLabel 9600 950  0    50   Output ~ 0
+NRST
+Wire Wire Line
+	10600 850  10300 850 
+Wire Wire Line
+	10300 850  10300 700 
+Wire Wire Line
+	10600 750  10200 750 
+Wire Wire Line
+	10200 750  10200 950 
+Wire Wire Line
+	10200 950  9850 950 
+Wire Wire Line
+	9850 900  9850 950 
+Connection ~ 9850 950 
+Wire Wire Line
+	9850 950  9600 950 
+Wire Wire Line
+	9850 600  10100 600 
+Wire Wire Line
+	10100 600  10100 700 
+Wire Wire Line
+	10100 700  10300 700 
+Connection ~ 10300 700 
 Wire Notes Line
 	9200 1500 11100 1500
+Text Notes 9200 1500 0    50   ~ 0
+Programming
 Text GLabel 7200 3250 2    50   Input ~ 0
 Vin_BSense_3V
 Text GLabel 7200 3150 2    50   Input ~ 0
@@ -1886,8 +1975,12 @@ Text GLabel 7200 3050 2    50   Input ~ 0
 Iin_Sense_3V
 Text GLabel 7200 2950 2    50   Input ~ 0
 Iout_Sense_3V
+Text GLabel 7650 2450 2    50   Input ~ 0
+PGEC
 Wire Wire Line
 	6850 2450 7650 2450
+Text GLabel 7650 2550 2    50   BiDi ~ 0
+PGED
 Wire Wire Line
 	6850 2550 7650 2550
 Text HLabel 7200 3650 2    50   Input ~ 0
@@ -1924,8 +2017,4 @@ Text HLabel 5250 3450 0    50   Input ~ 0
 DIP_SW4
 Text HLabel 7200 1150 2    50   Input ~ 0
 AUX_SENSE
-Wire Notes Line
-	9200 1500 9200 6450
-Wire Notes Line
-	11100 6450 11100 1500
 $EndSCHEMATC
