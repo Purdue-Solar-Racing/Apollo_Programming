@@ -1495,17 +1495,6 @@ F 3 "~" H 10100 1200 50  0001 C CNN
 	1    10100 1200
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_US R27
-U 1 1 61691508
-P 8450 4850
-F 0 "R27" H 8518 4896 50  0000 L CNN
-F 1 "20k" H 8518 4805 50  0000 L CNN
-F 2 "" V 8490 4840 50  0001 C CNN
-F 3 "~" H 8450 4850 50  0001 C CNN
-	1    8450 4850
-	0    1    1    0   
-$EndComp
 Connection ~ 10250 6000
 Text GLabel 10250 5700 2    50   Input ~ 0
 HEADLIGHT_PWM
@@ -1520,7 +1509,6 @@ Text GLabel 9850 4850 0    50   Output ~ 0
 HEADLIGHT_SNS
 Wire Wire Line
 	8650 4850 8600 4850
-Connection ~ 8600 4850
 Wire Wire Line
 	10350 4850 11000 4850
 Wire Wire Line
@@ -1530,4 +1518,7 @@ Wire Wire Line
 	11000 4850 11000 6000
 Text Notes 10800 2150 0    50   ~ 0
 HORN
+Wire Wire Line
+	8300 4850 8600 4850
+Connection ~ 8600 4850
 $EndSCHEMATC
