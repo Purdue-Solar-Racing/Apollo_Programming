@@ -1359,8 +1359,6 @@ Wire Wire Line
 Connection ~ 1500 3900
 Wire Wire Line
 	1500 3900 1500 4000
-Text HLabel 1150 4000 3    50   Output ~ 0
-Iin_Sense
 Wire Wire Line
 	2200 5350 2200 5550
 $Comp
@@ -1952,4 +1950,6 @@ Text GLabel 6450 6600 2    50   Input ~ 0
 Iout_Sense-
 Text GLabel 6450 6800 2    50   Input ~ 0
 Iout_Sense+
+Text GLabel 1150 4000 3    50   Output ~ 0
+Iin_Sense-
 $EndSCHEMATC
