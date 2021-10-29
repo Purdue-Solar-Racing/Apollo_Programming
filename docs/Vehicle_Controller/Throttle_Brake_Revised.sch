@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 5050 4450 0    50   Input ~ 0
+Clock
+Text GLabel 5050 4550 0    50   Input ~ 0
+Data
+Text GLabel 6150 4550 2    50   Input ~ 0
+Clock
+Text GLabel 6150 4450 2    50   Input ~ 0
+Data
+$Sheet
+S 5050 2150 1100 2650
+U 615FE5A0
+F0 "Sheet615FE59F" 50
+F1 "file615FE59F.sch" 50
+F2 "PB11" I R 6150 4250 50 
+F3 "PB10" I R 6150 4350 50 
+F4 "PB9" I R 6150 4450 50 
+F5 "PB8" I R 6150 4550 50 
+F6 "PB7" I L 5050 4550 50 
+F7 "PB6" I L 5050 4450 50 
+$EndSheet
+Wire Wire Line
+	6750 5050 6750 4450
+Wire Wire Line
+	6750 4450 6150 4450
+Wire Wire Line
+	6600 5150 6600 4550
+Wire Wire Line
+	6600 4550 6150 4550
+Wire Wire Line
+	6900 5050 6900 4800
+$Comp
+L Device:R DA_PU1
+U 1 1 617904C7
+P 6900 4650
+F 0 "DA_PU1" H 6970 4696 50  0000 L CNN
+F 1 "5k" H 6970 4605 50  0000 L CNN
+F 2 "" V 6830 4650 50  0001 C CNN
+F 3 "~" H 6900 4650 50  0001 C CNN
+	1    6900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R CLK_PU2
+U 1 1 617910B9
+P 7300 4650
+F 0 "CLK_PU2" H 7370 4696 50  0000 L CNN
+F 1 "5k" H 7370 4605 50  0000 L CNN
+F 2 "" V 7230 4650 50  0001 C CNN
+F 3 "~" H 7300 4650 50  0001 C CNN
+	1    7300 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 5150 7300 5150
+Connection ~ 6900 5050
+Wire Wire Line
+	6900 5050 6750 5050
+Wire Wire Line
+	6900 5050 9550 5050
+Wire Wire Line
+	7300 4800 7300 5150
+Connection ~ 7300 5150
+Wire Wire Line
+	7300 5150 9700 5150
+$Comp
+L power:VDD #PWR?
+U 1 1 61795CB4
+P 7300 4500
+F 0 "#PWR?" H 7300 4350 50  0001 C CNN
+F 1 "VDD" H 7315 4673 50  0000 C CNN
+F 2 "" H 7300 4500 50  0001 C CNN
+F 3 "" H 7300 4500 50  0001 C CNN
+	1    7300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 617965FA
+P 6900 4500
+F 0 "#PWR?" H 6900 4350 50  0001 C CNN
+F 1 "VDD" H 6915 4673 50  0000 C CNN
+F 2 "" H 6900 4500 50  0001 C CNN
+F 3 "" H 6900 4500 50  0001 C CNN
+	1    6900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61798FD6
+P 8100 4100
+F 0 "#PWR?" H 8100 3850 50  0001 C CNN
+F 1 "GND" H 8105 3927 50  0000 C CNN
+F 2 "" H 8100 4100 50  0001 C CNN
+F 3 "" H 8100 4100 50  0001 C CNN
+	1    8100 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3250 8300 4000
+Wire Wire Line
+	8300 4000 8100 4000
+Wire Wire Line
+	8100 3250 8100 3700
+Wire Wire Line
+	8100 4000 8100 4100
+Connection ~ 8100 4000
+$Comp
+L Throttle_Control-rescue:AS5200L-VehicleControl U1
+U 1 1 6178A9CC
+P 8450 2750
+F 0 "U1" H 8400 2850 50  0000 L CNN
+F 1 "AS5200L" H 8300 2750 50  0000 L CNN
+F 2 "" H 8450 2750 50  0001 C CNN
+F 3 "" H 8450 2750 50  0001 C CNN
+	1    8450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 2250 8100 1700
+Wire Wire Line
+	8100 1700 7850 1700
+Wire Wire Line
+	7850 1700 7850 2400
+Wire Wire Line
+	7850 2400 7950 2400
+Connection ~ 8100 1700
+Wire Wire Line
+	8100 1700 8100 1550
+Wire Wire Line
+	7850 1700 7250 1700
+Wire Wire Line
+	7250 1700 7250 2500
+Connection ~ 7850 1700
+$Comp
+L pspice:C C1
+U 1 1 617AB0D7
+P 7250 2750
+F 0 "C1" H 7428 2796 50  0000 L CNN
+F 1 "100nF" H 7428 2705 50  0000 L CNN
+F 2 "" H 7250 2750 50  0001 C CNN
+F 3 "~" H 7250 2750 50  0001 C CNN
+	1    7250 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3000 7250 3700
+Wire Wire Line
+	7250 3700 8100 3700
+Connection ~ 8100 3700
+Wire Wire Line
+	8100 3700 8100 4000
+Wire Wire Line
+	9700 2400 8950 2400
+Wire Wire Line
+	9700 2400 9700 5150
+Wire Wire Line
+	9550 2900 8950 2900
+Wire Wire Line
+	9550 2900 9550 5050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 617AEAA2
+P 8100 1550
+F 0 "#PWR?" H 8100 1400 50  0001 C CNN
+F 1 "+3V3" H 8115 1723 50  0000 C CNN
+F 2 "" H 8100 1550 50  0001 C CNN
+F 3 "" H 8100 1550 50  0001 C CNN
+	1    8100 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 5050 4450 4550
+Wire Wire Line
+	4300 5050 4300 4800
+$Comp
+L Device:R DA_PU2
+U 1 1 617877F6
+P 4300 4650
+F 0 "DA_PU2" H 4370 4696 50  0000 L CNN
+F 1 "5k" H 4370 4605 50  0000 L CNN
+F 2 "" V 4230 4650 50  0001 C CNN
+F 3 "~" H 4300 4650 50  0001 C CNN
+	1    4300 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R CLK_PU2
+U 1 1 61787800
+P 3900 4650
+F 0 "CLK_PU2" H 3970 4696 50  0000 L CNN
+F 1 "5k" H 3970 4605 50  0000 L CNN
+F 2 "" V 3830 4650 50  0001 C CNN
+F 3 "~" H 3900 4650 50  0001 C CNN
+	1    3900 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5150 3900 5150
+Connection ~ 4300 5050
+Wire Wire Line
+	4300 5050 4450 5050
+Wire Wire Line
+	4300 5050 1650 5050
+Wire Wire Line
+	3900 4800 3900 5150
+Connection ~ 3900 5150
+Wire Wire Line
+	3900 5150 1500 5150
+$Comp
+L power:VDD #PWR?
+U 1 1 61787811
+P 3900 4500
+F 0 "#PWR?" H 3900 4350 50  0001 C CNN
+F 1 "VDD" H 3915 4673 50  0000 C CNN
+F 2 "" H 3900 4500 50  0001 C CNN
+F 3 "" H 3900 4500 50  0001 C CNN
+	1    3900 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 6178781B
+P 4300 4500
+F 0 "#PWR?" H 4300 4350 50  0001 C CNN
+F 1 "VDD" H 4315 4673 50  0000 C CNN
+F 2 "" H 4300 4500 50  0001 C CNN
+F 3 "" H 4300 4500 50  0001 C CNN
+	1    4300 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61787825
+P 3100 4100
+F 0 "#PWR?" H 3100 3850 50  0001 C CNN
+F 1 "GND" H 3105 3927 50  0000 C CNN
+F 2 "" H 3100 4100 50  0001 C CNN
+F 3 "" H 3100 4100 50  0001 C CNN
+	1    3100 4100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3250 2900 4000
+Wire Wire Line
+	2900 4000 3100 4000
+Wire Wire Line
+	3100 3250 3100 3700
+Wire Wire Line
+	3100 4000 3100 4100
+Connection ~ 3100 4000
+$Comp
+L Throttle_Control-rescue:AS5200L-VehicleControl U2
+U 1 1 61787834
+P 2750 2750
+F 0 "U2" H 2700 2850 50  0000 L CNN
+F 1 "AS5200L" H 2600 2750 50  0000 L CNN
+F 2 "" H 2750 2750 50  0001 C CNN
+F 3 "" H 2750 2750 50  0001 C CNN
+	1    2750 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2250 3100 1700
+Wire Wire Line
+	3100 1700 3350 1700
+Wire Wire Line
+	3350 1700 3350 2400
+Wire Wire Line
+	3350 2400 3250 2400
+Connection ~ 3100 1700
+Wire Wire Line
+	3100 1700 3100 1550
+Wire Wire Line
+	3350 1700 3950 1700
+Wire Wire Line
+	3950 1700 3950 2500
+Connection ~ 3350 1700
+$Comp
+L pspice:C C2
+U 1 1 61787847
+P 3950 2750
+F 0 "C2" H 4128 2796 50  0000 L CNN
+F 1 "100nF" H 4128 2705 50  0000 L CNN
+F 2 "" H 3950 2750 50  0001 C CNN
+F 3 "~" H 3950 2750 50  0001 C CNN
+	1    3950 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 3000 3950 3700
+Wire Wire Line
+	3950 3700 3100 3700
+Connection ~ 3100 3700
+Wire Wire Line
+	3100 3700 3100 4000
+Wire Wire Line
+	1500 2400 2250 2400
+Wire Wire Line
+	1500 2400 1500 5150
+Wire Wire Line
+	1650 2900 2250 2900
+Wire Wire Line
+	1650 2900 1650 5050
+$Comp
+L power:+3V3 #PWR?
+U 1 1 61787859
+P 3100 1550
+F 0 "#PWR?" H 3100 1400 50  0001 C CNN
+F 1 "+3V3" H 3115 1723 50  0000 C CNN
+F 2 "" H 3100 1550 50  0001 C CNN
+F 3 "" H 3100 1550 50  0001 C CNN
+	1    3100 1550
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	1200 5500 1200 1200
+Wire Notes Line
+	1200 1200 4700 1200
+Wire Notes Line
+	4700 1200 4700 5500
+Wire Notes Line
+	5000 5500 5000 5450
+Wire Notes Line
+	4700 5500 1200 5500
+Wire Notes Line
+	6450 5550 6450 1200
+Wire Notes Line
+	6450 1200 10200 1200
+Wire Notes Line
+	10200 1200 10200 5550
+Wire Notes Line
+	10200 5550 6450 5550
+Text Notes 6500 5500 0    50   ~ 0
+Throttle Pedal Sensor\n
+Text Notes 1250 5450 0    50   ~ 0
+Brake Pedal Sensor
+Text Notes 8150 7650 0    50   ~ 0
+October 26, 2021\n
+Text Notes 7350 7500 0    50   ~ 0
+Throttle and Brake Control Sensors\n
+Text Notes 10600 7650 0    50   ~ 0
+1
+Wire Wire Line
+	4600 4450 5050 4450
+Wire Wire Line
+	4600 4450 4600 5150
+Wire Wire Line
+	4450 4550 5050 4550
+$EndSCHEMATC
