@@ -415,12 +415,6 @@ Wire Wire Line
 Connection ~ 2550 2950
 Wire Wire Line
 	2550 2950 2550 3200
-Text HLabel 2750 3500 0    50   BiDi ~ 0
-MPPT_SDA
-Text HLabel 2750 3600 0    50   Input ~ 0
-MPPT_SCL
-Text HLabel 2750 3700 0    50   Input ~ 0
-MPPT_RST
 Wire Wire Line
 	3150 2650 3150 3500
 Wire Wire Line
@@ -1971,4 +1965,21 @@ F 3 "" H 9100 1950 50  0001 C CNN
 	1    9150 2350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x03_Male J10
+U 1 1 61853526
+P 2550 3600
+F 0 "J10" H 2658 3881 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 2550 3450 50  0000 C CNN
+F 2 "" H 2550 3600 50  0001 C CNN
+F 3 "~" H 2550 3600 50  0001 C CNN
+	1    2550 3600
+	1    0    0    -1  
+$EndComp
+Text Notes 2150 3500 0    50   ~ 0
+MPPT_SDA
+Text Notes 2150 3600 0    50   ~ 0
+MPPT_SCL
+Text Notes 2150 3700 0    50   ~ 0
+MPPT_RST
 $EndSCHEMATC
