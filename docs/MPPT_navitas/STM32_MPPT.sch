@@ -1914,7 +1914,7 @@ Text HLabel 5250 3350 0    50   Input ~ 0
 DIP_SW3
 Text HLabel 5250 3450 0    50   Input ~ 0
 DIP_SW4
-Text HLabel 7200 1150 2    50   Input ~ 0
+Text HLabel 7200 1650 2    50   Input ~ 0
 AUX_SENSE
 Wire Notes Line
 	9200 1500 9200 6450
