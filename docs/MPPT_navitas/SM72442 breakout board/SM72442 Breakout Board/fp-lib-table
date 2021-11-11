@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name SM72442MTE_NOPB)(type KiCad)(uri ${KIPRJMOD}/SM72442MTE_NOPB)(options "")(descr ""))
+)
