@@ -1,0 +1,57 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1600 1200 3250 1900
+U 61848858
+F0 "Sheet61848857" 50
+F1 "MPPT_control.sch" 50
+F2 "HOA" O R 4850 1450 50 
+F3 "HSA" I R 4850 1550 50 
+F4 "LOA" O R 4850 1650 50 
+F5 "LOB" O R 4850 1750 50 
+F6 "HSB" I R 4850 1900 50 
+F7 "HOB" O R 4850 2050 50 
+$EndSheet
+$Sheet
+S 5600 1150 4150 1950
+U 61900D41
+F0 "trackers" 50
+F1 "trackers.sch" 50
+F2 "HOA" I L 5600 1450 50 
+F3 "HSA" O L 5600 1550 50 
+F4 "LOA" I L 5600 1650 50 
+F5 "LOB" I L 5600 1750 50 
+F6 "HSB" O L 5600 1900 50 
+F7 "HOB" I L 5600 2050 50 
+F8 "Vin_Sense" O L 5600 2450 50 
+F9 "Vout_Sense" O L 5600 2550 50 
+F10 "Vout" O L 5600 2650 50 
+F11 "Iin_Sense" O L 5600 2250 50 
+F12 "Iout_Sense" O L 5600 2350 50 
+$EndSheet
+Wire Wire Line
+	4850 1450 5600 1450
+Wire Wire Line
+	4850 1550 5600 1550
+Wire Wire Line
+	4850 1650 5600 1650
+Wire Wire Line
+	4850 1750 5600 1750
+Wire Wire Line
+	4850 1900 5600 1900
+Wire Wire Line
+	4850 2050 5600 2050
+$EndSCHEMATC

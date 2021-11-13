@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "full breakout board")(type KiCad)(uri "C:/Users/progu/OneDrive/Documents/Github/Apollo_Programming/docs/MPPT_navitas/SM72442 breakout board/SM72442 Breakout Board/full breakout board")(options "")(descr ""))
+  (lib (name SM72442MTE_NOPB)(type KiCad)(uri "C:/Users/progu/OneDrive/Documents/Github/Apollo_Programming/docs/MPPT_navitas/SM72442 breakout board/SM72442 Breakout Board/SM72442MTE_NOPB")(options "")(descr ""))
+)
