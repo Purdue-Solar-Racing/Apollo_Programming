@@ -1,4 +1,4 @@
-update=11/10/2021 5:30:20 PM
+update=11/13/2021 4:08:40 PM
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=SM72442 Breakout Board_horizontalconn.net
+LastNetListRead=SM72442 Breakout Board_V2.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
