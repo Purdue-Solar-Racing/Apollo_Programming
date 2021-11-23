@@ -1,4 +1,4 @@
-update=11/13/2021 4:08:40 PM
+update=11/20/2021 6:20:45 PM
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=SM72442 Breakout Board_V2.net
+LastNetListRead=SM72442 Breakout Board_V3.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -37,7 +37,7 @@ MinViaDiameter=0.4
 MinViaDrill=0.3
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
-MinHoleToHole=0.25
+MinHoleToHole=0.254
 TrackWidth1=0.25
 ViaDiameter1=0.8
 ViaDrill1=0.4
@@ -64,10 +64,10 @@ OthersTextSizeH=1
 OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
-SolderMaskClearance=0
+SolderMaskClearance=0.05
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=0
+SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0

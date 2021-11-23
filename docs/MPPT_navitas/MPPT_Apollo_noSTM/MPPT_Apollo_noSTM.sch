@@ -29,6 +29,9 @@ F9 "HOB" O R 4850 2650 50
 F10 "Vout" I R 4850 2800 50 
 F11 "Vin_Sense" I R 4850 1400 50 
 F12 "Vout_Sense" I R 4850 2900 50 
+F13 "Vin_BSense" I L 1600 1600 50 
+F14 "Vout_BSense" I L 1600 1800 50 
+F15 "Boost_EN" I L 1600 2050 50 
 $EndSheet
 $Sheet
 S 5800 1250 4700 2150
@@ -105,4 +108,27 @@ Wire Wire Line
 	5050 3250 5800 3250
 Wire Wire Line
 	5800 1400 4850 1400
+$Comp
+L Connector:Conn_01x03_Female J15
+U 1 1 619AB040
+P 950 1850
+F 0 "J15" H 842 1525 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 842 1616 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 950 1850 50  0001 C CNN
+F 3 "~" H 950 1850 50  0001 C CNN
+	1    950  1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1600 1600 1150 1600
+Wire Wire Line
+	1150 1600 1150 1750
+Wire Wire Line
+	1600 1800 1150 1800
+Wire Wire Line
+	1150 1800 1150 1850
+Wire Wire Line
+	1600 2050 1150 2050
+Wire Wire Line
+	1150 2050 1150 1950
 $EndSCHEMATC
