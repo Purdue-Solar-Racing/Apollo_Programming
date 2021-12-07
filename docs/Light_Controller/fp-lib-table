@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name ACTFoot)(type KiCad)(uri C:/Users/darin/OneDrive/Documents/GitHub/Apollo_Programming/docs/Light_Controller/Libraries_Footprints/ACTfootprints.pretty)(options "")(descr ""))
+  (lib (name LM3402Foot)(type KiCad)(uri C:/Users/darin/OneDrive/Documents/GitHub/Apollo_Programming/docs/Light_Controller/Libraries_Footprints/LM3402MMNOPfootprints.pretty)(options "")(descr ""))
+  (lib (name MAXFoot)(type KiCad)(uri C:/Users/darin/OneDrive/Documents/GitHub/Apollo_Programming/docs/Light_Controller/Libraries_Footprints/MAXfootprints.pretty)(options "")(descr ""))
+  (lib (name STMFoot)(type KiCad)(uri C:/Users/darin/OneDrive/Documents/GitHub/Apollo_Programming/docs/Light_Controller/Libraries_Footprints/STMfootprints.pretty)(options "")(descr ""))
+)

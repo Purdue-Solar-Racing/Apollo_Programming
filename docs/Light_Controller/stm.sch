@@ -1490,7 +1490,7 @@ U 1 1 613390D4
 P 6000 3500
 F 0 "U2" H 5300 4750 50  0000 C CNN
 F 1 "STM32F091RCTx" H 5950 4750 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 5400 1800 50  0001 R CNN
+F 2 "STMFoot:STM32F091RCTx" H 5400 1800 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00115237.pdf" H 6000 3500 50  0001 C CNN
 	1    6000 3500
 	1    0    0    -1  
