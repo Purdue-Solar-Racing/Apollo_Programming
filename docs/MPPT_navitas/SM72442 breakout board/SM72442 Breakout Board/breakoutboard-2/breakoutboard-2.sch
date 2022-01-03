@@ -2055,4 +2055,30 @@ F 3 "~" H 7300 6100 50  0001 C CNN
 	1    7300 6100
 	-1   0    0    1   
 $EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 62005B53
+P 6250 1400
+F 0 "#PWR01" H 6250 1250 50  0001 C CNN
+F 1 "+5V" H 6265 1573 50  0000 C CNN
+F 2 "" H 6250 1400 50  0001 C CNN
+F 3 "" H 6250 1400 50  0001 C CNN
+	1    6250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 620069BA
+P 6200 1700
+F 0 "J11" V 6072 1780 50  0000 L CNN
+F 1 "5V_conn" V 6163 1780 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x01_P2.00mm_Vertical" H 6200 1700 50  0001 C CNN
+F 3 "~" H 6200 1700 50  0001 C CNN
+	1    6200 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6250 1400 6250 1500
+Wire Wire Line
+	6250 1500 6200 1500
 $EndSCHEMATC
