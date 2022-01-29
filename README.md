@@ -15,7 +15,7 @@ Status Key and Due Dates
 | Subsystem                 | Lead                | Status | Members                   | Notes |
 |---------------------------|---------------------|--------|---------------------------|-------|
 | Battery Protection System | Nate Nauman         | 2/3    | Nicholas Gildenhuys       |       |
-| Driver Display            | Alan Zhang          | 1      | Darin Tsai, Jing Hoon     |       |
+| Driver Display            | Rachael Getz        | 1      | Darin Tsai, Jing Hoon     |       |
 | Light Controller          | Darin Tsai          | 3      |                           |       |
 | Junction Controller       | Nicholas Gildenhuys | 0      |                           |       |
 | Motor Controller          | Nate Nauman         | 2      | Nicholas Gildenhuys       |       |
