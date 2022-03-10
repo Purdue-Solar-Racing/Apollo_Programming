@@ -3,4 +3,5 @@
   (lib (name power_Jing)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/power_Jing.lib)(options "")(descr ""))
   (lib (name 2021-10-09_19-54-13)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/2021-10-09_19-54-13.lib)(options "")(descr ""))
   (lib (name Driver_FET)(type Legacy)(uri C:/Users/progu/OneDrive/Documents/KICAD/user_lib/Driver_FET.lib)(options "")(descr ""))
+  (lib (name MPPT_navitas-rescue)(type Legacy)(uri ${KIPRJMOD}/MPPT_navitas-rescue.lib)(options "")(descr ""))
 )
